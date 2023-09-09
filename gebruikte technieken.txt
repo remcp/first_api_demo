@@ -1,0 +1,20 @@
+python 3
+->requests, een package voor het maken van html requests met python
+
+
+beautifull soup, voor het parsen van de html
+import requests
+from bs4 import BeautifulSoup
+-beatifull soup werkt niet met dynamische websites. overgestapt naar selenium
+
+
+->selenium, voor dynamic websites die niet de html terug geven maar javascript
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Chrome()
+
+
+->flask, python webserver. wordt gebruikt voor de api calls. deze neemt de functie over van selium die de gewenste producten ophaald
+
+(selenium en flask niet tegerlijkertijd draaien vanwegen conflict. eerst de flask api opstarten en pas wanneer de request binnenkomt de chrome sessie starten)
